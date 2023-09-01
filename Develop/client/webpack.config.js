@@ -12,15 +12,16 @@ const { InjectManifest } = require('workbox-webpack-plugin');
 // TODO: Add CSS loaders and babel to webpack.
 
 module.exports = () => {
+  const path = require('path'); // Don't forget to require 'path' if you haven't
   return {
     mode: 'development',
     entry: {
-      main: './src/js/index.js',
-      install: './src/js/install.js'
+      main: './client/src/js/index.js',
+      install: './client/src/js/install.js'
     },
     output: {
       filename: '[name].bundle.js',
-      path: path.resolve(__dirname, 'dist'),
+      path: path.resolve(__dirname, 'client/dist'),
     },
     plugins: [
       // InjectManifest for handling service worker
