@@ -39,7 +39,7 @@ module.exports = () => {
             'css-loader'
           ]
         },
-        // javascript handling - babel
+        // javascript handling for babel
         {
           test: /\.js$/,
           exclude: /node_modules/,
